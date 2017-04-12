@@ -1,20 +1,8 @@
 var React = require('react');
-
+var Checkbox = require('react-bootstrap/lib/Checkbox');
 class InboxData extends React.Component  {
 	render() {
-			let inboxes = [
-  					{
-  						name : 'Steven Koening',
-  						content : 'In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do.',
-  						date : '12-April-2017'
-  					},
-  					{ 
-  						name : 'Rubin Spinella',
-  						content : 'The wise man therefore always holds in these matters to this principle of selection.',
-  						date : '12-April-2017'
-  					}
-  			];
-			let tableData = inboxes.map((item)=>
+			const tableData = this.props.inboxes.map((item)=>
 				<tr>
 					<td><Checkbox></Checkbox></td>
 					<td>{item.name}</td>
@@ -22,7 +10,7 @@ class InboxData extends React.Component  {
 					<td>{item.date}</td>
 				</tr>
 			);
-		return tableData;
+		return (<tbody>{tableData}</tbody>);
 	}
 }
 

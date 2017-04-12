@@ -10,9 +10,7 @@ class HelloMessage extends React.Component {
       <DefaultLayout title={this.props.title} >
         <Panel>
         	<Table>
-        		<tbody>
         			<InboxData inboxes={this.props.inboxes} />
-        		</tbody>
         	</Table>
         </Panel>
       </DefaultLayout>
