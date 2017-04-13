@@ -1,21 +1,18 @@
 var React = require('react');
 var DefaultLayout = require('../layouts/default');
+var MailBox = require('../layouts/MailBox');
 var InboxData = require('../includes/inboxData');
 var Table = require('react-bootstrap/lib/Table');
 var Panel = require('react-bootstrap/lib/Panel');
 
-class HelloMessage extends React.Component {
+class Index extends React.Component {
   render() {
     return (
       <DefaultLayout title={this.props.title} >
-        <Panel>
-        	<Table>
-        			<InboxData inboxes={this.props.inboxes} />
-        	</Table>
-        </Panel>
+        <MailBox inboxes={this.props.inboxes} />
       </DefaultLayout>
     );
   }
 }
 
-module.exports = HelloMessage;
+module.exports = Index;
