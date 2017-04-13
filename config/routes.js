@@ -13,6 +13,7 @@ const home = require('../app/controllers/home');
 module.exports = function (app, passport) {
 
   app.get('/', home.index);
+  app.get('/compose', home.compose);
 
   /**
    * Error handling

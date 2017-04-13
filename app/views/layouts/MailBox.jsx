@@ -1,7 +1,7 @@
 var React = require('react');
 var Row = require('react-bootstrap/lib/Row');
 var Col = require('react-bootstrap/lib/Col');
-var Compose = require('../includes/Compose');
+var ComposeButton = require('../includes/ComposeButton');
 var Sidebar = require('../includes/sidebar');
 var InboxData = require('../includes/inboxData');
 var SearchBox = require('../includes/SearchBox');
@@ -17,7 +17,7 @@ class MailBox extends React.Component {
       	<Row>
       		<Col xs={12} md={3}>
       			<div className="content-box nav-list mrg15B">
-      				<Compose />
+      				<ComposeButton />
       				<Sidebar />
       			</div>
       		</Col>

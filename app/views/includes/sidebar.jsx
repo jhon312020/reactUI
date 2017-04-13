@@ -9,12 +9,12 @@ const messages = ['Message1', 'Message2', 'Message3'];
 const sentMessages = ['sent2', 'sent3', 'sent4', 'sent5'];
 const sideBarContent = (
 	<ListGroup>
-    <ListGroupItem href="#/Inbox">
+    <ListGroupItem href="/">
     	<Icon iconType={"font-gray icon-inbox"} /> Inbox 
     	<Badge counter={messages.length} badgeColor={"bg-blue"}/> 
     </ListGroupItem>
     <ListGroupItem href="#/Send-an-email">
-    	<Icon iconType={"font-gray icon-envelope-o"} /> Send an email 
+    	<Icon iconType={"font-gray icon-envelope-o"} /> Sent Mail 
     	<Badge counter={sentMessages.length} badgeColor={"bg-azure"}/>
     </ListGroupItem>
 	</ListGroup>
