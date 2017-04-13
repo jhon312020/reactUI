@@ -8,12 +8,14 @@ exports.index = function (req, res) {
   					{
   						name : 'Steven Koening',
   						content : 'In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do.',
-  						date : '12-April-2017'
+  						attachment: 'false',
+              date : '12-April-2017'
   					},
   					{ 
   						name : 'Rubin Spinella',
   						content : 'The wise man therefore always holds in these matters to this principle of selection.',
-  						date : '12-April-2017'
+  						attachment: 'true',
+              date : '12-April-2017'
   					}
   			];
   res.render('home/index', {
