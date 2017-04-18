@@ -13,7 +13,11 @@ const home = require('../app/controllers/home');
 module.exports = function (app, passport) {
 
   app.get('/', home.index);
+  app.get('/sentMail', home.sentMail);
   app.get('/compose', home.compose);
+  app.post('/sendEmail', home.sendEmail);
+  app.get('/getUserMailCount', home.getUserMailCount);
+  app.get('/singleMailBox/:id', home.singleMailBox);
 
   /**
    * Error handling

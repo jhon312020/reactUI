@@ -9,7 +9,7 @@ class Index extends React.Component {
   render() {
     return (
       <DefaultLayout title={this.props.title} >
-        <MailBox inboxes={this.props.inboxes} />
+        <MailBox title={this.props.title} inboxes={this.props.inboxes} />
       </DefaultLayout>
     );
   }

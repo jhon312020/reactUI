@@ -1,22 +1,32 @@
 var React = require('react');
-var Row = require('react-bootstrap/lib/Row');
-var Col = require('react-bootstrap/lib/Col');
 var ComposeButton = require('../includes/ComposeButton');
 var ComposeForm = require('../includes/ComposeForm');
 var Sidebar = require('../includes/sidebar');
 
 class ComposeMail extends React.Component {
+
   render() {
+    let errors = '';
+
+    if (this.props.errors) {
+      errors = this.props.errors.map((item) =>
+        <p>{item}</p>
+      );
+      if (errors != '') {
+        errors = (<div className="alert alert-danger">{errors}</div>);
+      }
+    }
+
     return (
 			<div className="row mailbox-wrapper">
-      	<Row>
-      		<Col xs={12} md={3}>
+      		<div className="col-xs-12 col-md-3">
       			<div className="content-box nav-list mrg15B">
       				<ComposeButton />
       				<Sidebar />
       			</div>
-      		</Col>
-      		<Col xs={12} md={9}>
+      		</div>
+      		<div className="col-xs-12 col-md-9">
+            {errors}
       			<div className="content-box">
 		      		<div className="mail-header clearfix row">
 		      			<div className="col-md-8">
@@ -26,10 +36,9 @@ class ComposeMail extends React.Component {
 		    				</div>
 		      		</div>
 		      		<div className="divider"></div>
-		    			<ComposeForm />
+		    			<ComposeForm csrf_token={this.props.csrf_token} />
 			      </div>
-      		</Col>
-      	</Row>
+      		</div>
       </div>     		
     );
   }

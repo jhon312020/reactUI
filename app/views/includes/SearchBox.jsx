@@ -6,7 +6,7 @@ class SearchBox extends React.Component  {
 			<div className="input-group">
         <input type="text" className="form-control" />
       	<div className="input-group-btn">
-        	<button type="button" className="btn btn-default" tabindex="-1">
+        	<button type="button" className="btn btn-default" tabIndex="-1">
           	<i className="glyph-icon icon-search"></i>
           </button>
         </div>

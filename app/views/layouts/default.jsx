@@ -1,10 +1,5 @@
 var React = require('react');
 var Header = require('../includes/header');
-var Row = require('react-bootstrap/lib/Row');
-var Col = require('react-bootstrap/lib/Col');
-
-var PageHeader = require('react-bootstrap/lib/PageHeader');
-
 
 class DefaultLayout extends React.Component {
   render() {
@@ -17,10 +12,10 @@ class DefaultLayout extends React.Component {
 					<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.8/react-bootstrap.min.js"></script>
 		    </head>
         <body>
-        	<div id="page-wrapper" className="container">
-	        	<PageHeader>
+        	<div id="page-wrapper" >
+	        	<div className="page-header">
         			<Header />
-	        	</PageHeader>
+	        	</div>
 	        	<div id="page-content-wrapper">
 	        		<div id="page-content">
 	        			<div id="container">
